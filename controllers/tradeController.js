@@ -4,7 +4,7 @@ const path = require('path');
 const Trade = require('../models/Trade');
 
 const uploadCSV = async (req, res) => {
-    const filePath = path.join(__dirname, '../../uploads/', req.file.filename);
+    const filePath = path.join(__dirname, '../uploads/', req.file.filename);
 
     fs.createReadStream(filePath)
         .pipe(csv())
